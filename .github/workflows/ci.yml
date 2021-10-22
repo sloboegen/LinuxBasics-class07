@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: task07
     steps:
-      - uses: .github/actions/task04.yml@ task04-result 
+      - uses: .github/actions/task04.yml task04-result 
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
