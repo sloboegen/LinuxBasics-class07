@@ -10,4 +10,4 @@ jobs:
   dummy:
     runs-on: ubuntu-latest
     steps:
-      - run: date >> push.log;git config --global user.name ${GITHUB_ACTOR}; git add push.log; git commit -m '"log push"';git push
+      - run: date >> push.log;git config --global user.name ${GITHUB_ACTOR}; git add *; git commit -m '"log push"';git push
