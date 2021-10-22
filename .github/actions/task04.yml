@@ -7,4 +7,4 @@ build:
   name: Task04
   runs-on: ubuntu-latest
   steps:
-    - run: touch $1
+    - run: touch filename
