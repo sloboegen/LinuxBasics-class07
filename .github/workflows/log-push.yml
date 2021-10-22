@@ -8,5 +8,6 @@ on:
 
 jobs:
   dummy:
+    runs-on: ubuntu-latest
     steps:
       - run: echo "TODO"
