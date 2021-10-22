@@ -1,4 +1,3 @@
-#Костыль
 name: LinuxCourse Workflow
 
 on:
@@ -20,4 +19,5 @@ jobs:
         with:
           fetch-depth: 0
       - run: sudo apt-get install cmatrix
+      - run: touch ghc-version.txt; ghc --version > ghc-version.txt
       - run: echo "autograding emulator"
