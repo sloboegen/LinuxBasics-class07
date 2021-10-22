@@ -3,3 +3,8 @@ description: 'Creating a file'
 inputs:
   filename:
     required: true
+build:
+  name: Task04
+  runs-on: ubuntu-latest
+  steps:
+    - run: touch $1
