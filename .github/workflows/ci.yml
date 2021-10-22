@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
       - run: sudo apt-get install cmatrix
       - run: touch ghc-version.txt && ghc --version >> ghc-version.txt
-      - uses: actions/task04
+      - uses: actions/task04@test
         with:
           filename: task04-result
       - run: echo "autograding emulator"
