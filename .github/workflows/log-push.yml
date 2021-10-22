@@ -1,0 +1,12 @@
+# TASK 3
+
+name: LogPush Workflow
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  dummy:
+    steps:
+      - run: echo "TODO"
