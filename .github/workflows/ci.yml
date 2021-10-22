@@ -14,13 +14,13 @@ jobs:
     name: Autograding
     runs-on: ubuntu-latest
     needs: task07
-    steps:
+    steps:      
+      - uses: actions/task04
+        with:
+          filename: task04-result
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - run: sudo apt-get install cmatrix
       - run: touch ghc-version.txt && ghc --version >> ghc-version.txt
-      - uses: actions/task04@test
-        with:
-          filename: task04-result
       - run: echo "autograding emulator"
