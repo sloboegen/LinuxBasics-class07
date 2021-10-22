@@ -18,4 +18,5 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - run: sudo apt-get install cmatrix
       - run: echo "autograding emulator"
