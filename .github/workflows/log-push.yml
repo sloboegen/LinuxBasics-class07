@@ -13,7 +13,6 @@ jobs:
       - run: date >> push.log
       - run: git config --global user.name ${GITHUB_ACTOR}
       - run: git config --global user.email "malov-tarasov@gmail.com"
-      - run: git checkout main
       - run: git add ${GITHUB_WORKSPACE}/push.log
       - run: git commit -m '"log push"'
       - run: git push
