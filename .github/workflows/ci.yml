@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: task07
     steps:
-      - uses: ./.github/actions/task04
-        with: 
-          filename: task04-result
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - uses: ./.github/actions/task04
+        with: 
+          filename: task04-result
       - run: sudo apt-get install cmatrix
       - run: touch ghc-version.txt; ghc --version > ghc-version.txt
       - run: echo "autograding emulator"
