@@ -3,8 +3,7 @@ description: 'Creating a file'
 inputs:
   filename:
     required: true
-build:
-  name: Task04
-  runs-on: ubuntu-latest
+runs:
+  using: "composite"
   steps:
-    - run: touch filename
+    - run: touch ${{ inputs.who-to-greet }}
