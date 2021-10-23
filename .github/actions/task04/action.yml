@@ -6,4 +6,4 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: touch ${{ inputs.who-to-greet }}
+  - run: touch ${{ inputs.filename }}
