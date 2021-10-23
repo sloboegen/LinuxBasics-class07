@@ -3,5 +3,4 @@ description: 'Creating a file'
 inputs:
   filename:
     required: true
-steps:
-  - run: touch $filename
+runs: touch $INPUT_FILENAME
