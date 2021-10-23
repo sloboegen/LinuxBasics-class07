@@ -21,6 +21,7 @@ jobs:
       - run: sudo apt-get install cmatrix
       - run: touch ghc-version.txt && ghc --version >> ghc-version.txt    
       - uses: actions/checkout@v1  
+      - uses: JojOatXGME/prepare-local-actions@v1
       - uses: ./.github/actions/task04
         with:
           filename: task04-result
