@@ -3,4 +3,4 @@ description: 'Creating a file'
 inputs:
   filename:
     required: true
-runs: touch $INPUT_FILENAME
+runs: touch ${{ inputs.filename }}
