@@ -6,4 +6,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-  - run: touch ${{ inputs.filename }}
+    - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+    - run: touch ${{ inputs.filename }}
