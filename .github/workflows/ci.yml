@@ -15,7 +15,8 @@ jobs:
     needs: task07
     steps:
       - uses: .github/actions/task04
-        with: task04-result 
+        with: 
+          filename: task04-result 
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
