@@ -8,5 +8,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: touch "$fliename"
+    - run: touch "$filename"
       shell: bash
