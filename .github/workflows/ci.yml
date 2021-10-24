@@ -9,8 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "kek"
-      - run: ls
+      - run: cd ../..
       - run: ghc --version >> ./ghc-version.txt
+      - run: git status
 
 
   task07:
