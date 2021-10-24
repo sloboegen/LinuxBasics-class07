@@ -19,5 +19,5 @@ jobs:
         with:
           fetch-depth: 0
       - run: sudo apt install cmatrix
-      - run: echo ghc --version >> ghc-version.txt
+      - run: ghc --version > ghc-version.tx
       - run: echo "autograding emulator"
