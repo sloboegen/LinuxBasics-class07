@@ -14,9 +14,8 @@ jobs:
     name: Install cmatrix
     needs: ghcversion
     runs-on: ubuntu-latest
-    steps:
-      - run: apt install cmatrix
-
+    using: cmatrix
+    
   build:
     name: Autograding
     runs-on: ubuntu-latest
