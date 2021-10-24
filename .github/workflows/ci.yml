@@ -8,6 +8,7 @@ jobs:
   ghcversion:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: ghc --version >> ./ghc-version.txt
       - run: cat ./ghc-version.txt
       - run: git config --local user.name  ${{ github.actor }}
