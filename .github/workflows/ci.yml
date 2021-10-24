@@ -4,11 +4,18 @@ on:
   - push
   - pull_request
 
-jobs:
-  task07:
+jobs:  
+  ghcversion:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "TODO"
+      - run: echo ghc --version >> ghc-version.txt
+
+  task07:
+    name: Install cmatrix
+    needs: ghcversion
+    runs-on: ubuntu-latest
+    steps:
+      - run: apt install cmatrix
 
   build:
     name: Autograding
