@@ -8,6 +8,7 @@ jobs:
   ghcversion:
     runs-on: ubuntu-latest
     steps:
+      - run: ls
       - run: echo ghc --version >> ./ghc-version.txt
       - run: git add --all
       - run: git commit -m 'ghc-version'
