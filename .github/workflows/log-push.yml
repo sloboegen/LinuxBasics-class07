@@ -10,4 +10,9 @@ jobs:
   dummy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "TODO"
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - run: date -u >> push.log
+      - run: git config --global user.name ${GITHUB_ACTOR}
+      - run: git add . && git commit -m "log push" && git push
