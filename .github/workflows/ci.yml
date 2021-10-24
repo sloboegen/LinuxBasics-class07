@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "kek"
-      - run: cd MForest7/LinuxBasics-class07
+      - run: cd ../../..
+      - run: ls
       - run: ghc --version >> ./ghc-version.txt
       - run: cat ./ghc-version.txt
 
