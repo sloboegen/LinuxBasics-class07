@@ -1,9 +1,0 @@
-name: 'Task04'
-description: 'Creating a file'
-
-inputs:
-  filename:
-    required: true
-
-steps:
-  - run: touch "$fliename"
