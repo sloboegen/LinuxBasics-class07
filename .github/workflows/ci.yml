@@ -32,5 +32,5 @@ jobs:
           fetch-depth: 0
       - uses: ./.github/actions/
         with:
-          filename: task04-result
+          filename: 'task04-result'
       - run: echo "autograding emulator"
