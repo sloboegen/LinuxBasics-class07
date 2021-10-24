@@ -15,6 +15,8 @@ jobs:
     needs: ghcversion
     runs-on: ubuntu-latest
     using: cmatrix
+    steps:
+      - run: echo "using cmatrix"
     
   build:
     name: Autograding
