@@ -8,3 +8,4 @@ inputs:
 runs:
   steps:
     - run: touch "$fliename"
+      shell: bash
