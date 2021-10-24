@@ -8,13 +8,13 @@ jobs:
   ghcversion:
     runs-on: ubuntu-latest
     steps:
-      - run: ghc --version >> ghc-version.txt
+  - run: echo ghc --version | Out-File -FilePath "./ghc-version.txt"
+
 
   task07:
     name: Install cmatrix
     needs: ghcversion
     runs-on: ubuntu-latest
-    using: cmatrix
     steps:
       - run: echo "using cmatrix"
     
