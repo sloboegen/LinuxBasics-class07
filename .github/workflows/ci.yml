@@ -18,7 +18,6 @@ jobs:
 
   task07:
     name: Install cmatrix
-    needs: ghcversion
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt-get install cmatrix
@@ -27,7 +26,6 @@ jobs:
   build:
     name: Autograding
     runs-on: ubuntu-latest
-    needs: task07
     steps:
       - uses: actions/checkout@v2
         with:
