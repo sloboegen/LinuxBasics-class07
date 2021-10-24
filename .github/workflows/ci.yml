@@ -35,3 +35,7 @@ jobs:
         with:
           filename: "task04-result"
       - run: echo "autograding emulator"
+      - run: git config --local user.name  ${{ github.actor }}
+      - run: git add .
+      - run: git commit -m 'task04'
+      - run: git push origin task
