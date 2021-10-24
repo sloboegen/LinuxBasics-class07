@@ -14,7 +14,7 @@ jobs:
       - run: git config --local user.name  ${{ github.actor }}
       - run: git pull
       - run: git add .
-      - run: git commit -m 'ghc-version'
+      - run: git commit -m 'ghc-version' --allow-empty
       - run: git push origin task
 
   task07:
@@ -39,5 +39,5 @@ jobs:
       - run: git config --local user.name  ${{ github.actor }}
       - run: git pull
       - run: git add .
-      - run: git commit -m 'task04'
+      - run: git commit -m 'task04' --allow-empty
       - run: git push origin task
