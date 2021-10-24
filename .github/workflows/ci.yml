@@ -26,8 +26,7 @@ jobs:
   build:
     name: Autograding
     runs-on: ubuntu-latest
-    needs: ghcversion
-    needs: task07
+    needs: [ ghcversion, task07 ]
     steps:
       - uses: actions/checkout@v2
         with:
