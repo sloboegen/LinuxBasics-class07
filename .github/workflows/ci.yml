@@ -8,9 +8,9 @@ jobs:
   ghcversion:
     runs-on: ubuntu-latest
     steps:
-      - run: cd /home/runner/work/LinuxBasics-class07/LinuxBasics-class07
       - run: ghc --version >> ./ghc-version.txt
       - run: cat ./ghc-version.txt
+      - run: git config --local user.name  ${{ github.actor }}
       - run: git add .
       - run: git commit -m 'ghc-version'
 
