@@ -20,7 +20,8 @@ jobs:
     needs: ghcversion
     runs-on: ubuntu-latest
     steps:
-      - run: echo "using cmatrix"
+      - run: apt-get cmatrix
+      - run: echo "get cmatrix"
     
   build:
     name: Autograding
