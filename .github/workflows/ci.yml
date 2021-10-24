@@ -20,7 +20,7 @@ jobs:
     needs: ghcversion
     runs-on: ubuntu-latest
     steps:
-      - run: apt-get install cmatrix
+      - run: sudo apt-get install cmatrix
       - run: echo "get cmatrix"
     
   build:
