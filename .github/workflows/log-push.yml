@@ -14,6 +14,3 @@ jobs:
       - run: git add .
       - run: git commit -m 'log push'
       - run: git push origin task
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true
