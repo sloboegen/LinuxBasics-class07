@@ -5,5 +5,5 @@ inputs:
   filename:
     required: true
 
-steps:
+runs:
   - run: touch "$fliename"
