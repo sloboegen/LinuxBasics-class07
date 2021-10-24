@@ -6,4 +6,5 @@ inputs:
     required: true
 
 runs:
-  - run: touch "$fliename"
+  steps:
+    - run: touch "$fliename"
