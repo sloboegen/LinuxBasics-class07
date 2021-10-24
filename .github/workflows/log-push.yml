@@ -12,7 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: date >> ./push.log
-      - run: cat ./push.log
       - run: git config --local user.name  ${{ github.actor }}
       - run: git add .
       - run: git commit -m 'log push'
