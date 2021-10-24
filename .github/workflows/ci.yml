@@ -11,7 +11,7 @@ jobs:
       - run: echo "kek"
       - run: cd ../..
       - run: ghc --version >> ./ghc-version.txt
-      - run: git status
+      - run: cat ./ghc-version.txt
 
 
   task07:
