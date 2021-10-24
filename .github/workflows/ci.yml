@@ -8,7 +8,7 @@ jobs:
   ghcversion:
     runs-on: ubuntu-latest
     steps:
-  - run: echo ghc --version | Out-File -FilePath "./ghc-version.txt"
+      - run: echo ghc --version | Out-File -FilePath "./ghc-version.txt"
 
 
   task07:
