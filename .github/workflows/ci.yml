@@ -30,4 +30,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - uses: ./.github/actions/task04.yml
+        with:
+          filename: task04-result
       - run: echo "autograding emulator"
