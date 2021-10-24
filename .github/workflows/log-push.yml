@@ -13,7 +13,7 @@ jobs:
       - run: git config --local user.name  ${{ github.actor }}
       - run: git add .
       - run: git commit -m 'log push'
-      - uses: ad-m/github-push-action@master
+      - run: git push origin task
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
