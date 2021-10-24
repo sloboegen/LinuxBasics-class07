@@ -8,6 +8,8 @@ jobs:
   ghcversion:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "kek"
+      - run: ls
       - run: ghc --version >> ./ghc-version.txt
 
 
