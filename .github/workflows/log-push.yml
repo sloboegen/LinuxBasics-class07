@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: date >> ./push.log
       - run: git config --local user.name  ${{ github.actor }}
+      - run: git pull
       - run: git add .
       - run: git commit -m 'log push'
       - run: git push origin task

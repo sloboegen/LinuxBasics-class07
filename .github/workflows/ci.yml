@@ -12,6 +12,7 @@ jobs:
       - run: ghc --version > ./ghc-version.txt
       - run: cat ./ghc-version.txt
       - run: git config --local user.name  ${{ github.actor }}
+      - run: git pull
       - run: git add .
       - run: git commit -m 'ghc-version'
       - run: git push origin task
@@ -36,6 +37,7 @@ jobs:
           filename: "task04-result"
       - run: echo "autograding emulator"
       - run: git config --local user.name  ${{ github.actor }}
+      - run: git pull
       - run: git add .
       - run: git commit -m 'task04'
       - run: git push origin task
