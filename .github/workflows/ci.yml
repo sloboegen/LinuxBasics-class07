@@ -23,5 +23,6 @@ jobs:
           filename: task04-result
       - run: sudo apt install cmatrix
       - run: ghc --version > ./ghc-version.txt
+      - run: git config --global user.name ${GITHUB_ACTOR}
       - run: git add . && git commit -m "ghc-version" && git push
       - run: echo "autograding emulator"
