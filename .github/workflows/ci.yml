@@ -9,13 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "TODO"
+      
+  ghcVersion:
+    runs-on: ubuntu-latest
+    needs: task07
+    steps:
+      - run: echo $(ghc --version) > ghc-version.txt
 
   build:
     name: Autograding
     runs-on: ubuntu-latest
-    needs: task07
+    needs: [task07, ghcVersion]
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - run: echo "autograding emulator"
+      - run: sudo apt-get install cmatrix
+      - run: cmatrix
