@@ -15,11 +15,19 @@ jobs:
     needs: task07
     steps:
       - run: echo $(ghc --version) > ghc-version.txt
+      
+  createFile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions
+        with:
+          filename: task04-result
 
   build:
     name: Autograding
     runs-on: ubuntu-latest
-    needs: [task07, ghcVersion]
+    needs: [task07, ghcVersion, createFile]
     steps:
       - uses: actions/checkout@v2
         with:

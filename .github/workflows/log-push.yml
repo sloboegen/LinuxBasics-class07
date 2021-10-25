@@ -14,6 +14,7 @@ jobs:
   dummy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: echo "TODO"
       - run: echo $(date +"%d-%m-%y-%T") >> push.log
       - run: git checkout task
