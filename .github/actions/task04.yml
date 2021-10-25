@@ -3,3 +3,17 @@ description: 'Creating a file'
 inputs:
   filename:
     required: true
+jobs:
+  task07:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "TODO"
+
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    using: "composite"
+    steps:
+      - id: create-file
+      - run: touch ${{ inputs.filename }}.
+      	shell: bash

@@ -18,6 +18,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - id: another
+        uses: ./ .github/actions@v1
+        with:
+          filename: 'task04-result'
       - run: sudo apt install cmatrix
       - run: echo $(ghc --version) > ghc-version.txt
+      - run: steps.another
       - run: echo "autograding emulator"
