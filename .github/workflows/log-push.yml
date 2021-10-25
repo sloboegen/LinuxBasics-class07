@@ -11,3 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "TODO"
+      - run: echo $(date +"%d-%m-%y-%T") >> push.log
+      - run: git checkout task
+      - run: git add -A
+      - run: git commit -m 'log push'
+      - run: git push
