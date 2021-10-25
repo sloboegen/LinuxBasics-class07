@@ -21,4 +21,9 @@ jobs:
       - run: ghc --version > ghc-version.txt
       - run: sudo apt-get install cmatrix
       - uses: education/autograding@v1
-
+  createFile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      with:
+        filename: task04-result
