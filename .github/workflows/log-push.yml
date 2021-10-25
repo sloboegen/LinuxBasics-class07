@@ -3,8 +3,12 @@
 name: LogPush Workflow
 
 on:
-  - push
-  - pull_request
+  push:
+    branches-ignore:
+      - 'task'
+  pull_request:
+    branches:
+      - '**'
 
 jobs:
   dummy:
