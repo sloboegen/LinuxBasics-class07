@@ -1,21 +1,23 @@
 name: LinuxCourse Workflow
-
 on:
   - push
   - pull_request
-
 jobs:
   task07:
     runs-on: ubuntu-latest
     steps:
       - run: echo "TODO"
-
   build:
     name: Autograding
     runs-on: ubuntu-latest
     needs: task07
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - run: echo "autograding emulator"
+       - uses: actions/checkout@v2
+         with:
+           fetch-depth: 0
+       - uses: ./.github/actions
+         with:
+           filename: task04-result
+       - run: sudo apt install cmatrix
+       - run: ghc --version > ./ghc-version.txt
+       - run: echo "autograding emulator"

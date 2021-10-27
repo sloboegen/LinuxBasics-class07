@@ -1,0 +1,10 @@
+name: 'Task04'
+ description: 'Creating a file'
+ inputs:
+   filename:
+     required: true
+ runs:
+   using: "composite"
+   steps:
+     - run: touch ${{ inputs.filename }}
+       shell: bash

@@ -1,13 +1,18 @@
 # TASK 3
 
 name: LogPush Workflow
-
 on:
   - push
   - pull_request
-
 jobs:
-  dummy:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "TODO"
+   dummy:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v2
+         with:
+           fetch-depth: 0
+       - run: date -u >> push.log
+       - run: git config --global user.name ${GITHUB_ACTOR}
+       - run: git add .
+       - run: git commit -m 'log push'
+       - run: git push
