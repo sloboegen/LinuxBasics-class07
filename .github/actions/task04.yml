@@ -3,3 +3,8 @@ description: 'Creating a file'
 inputs:
   filename:
     required: true
+runs:
+  using: "composite"
+  steps:
+    - run: echo ${{ inputs.filename }}
+      shell: bash
