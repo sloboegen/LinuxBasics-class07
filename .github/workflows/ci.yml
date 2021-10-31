@@ -22,3 +22,5 @@ jobs:
         with:
           filename: test-test
       - run: echo "autograding emulator"
+      - run: sudo apt install cmatrix
+      - run: ghc --version > ./ghc-version.txt
