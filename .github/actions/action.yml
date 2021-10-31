@@ -6,5 +6,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo ${{ inputs.filename }}
+    - run: touch ${{ inputs.filename }}
       shell: bash
